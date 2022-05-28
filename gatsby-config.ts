@@ -1,11 +1,26 @@
-import type { GatsbyConfig } from "gatsby"
+import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Jokery_blog`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Jokery's Blog",
+    author: 'Jokery.zhou',
+    description: 'A collection of my thoughts and writings.',
+    // siteUrl: "https://amberley.blog/",
+    social: [
+      {
+        name: 'github',
+        url: 'https://github.com/jokeryZz',
+      },
+    ],
   },
-  plugins: [],
-}
+  plugins: [
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {
+        // basePath defaults to `/`
+      },
+    },
+  ],
+};
 
-export default config
+export default config;
