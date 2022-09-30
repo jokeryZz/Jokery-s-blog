@@ -150,7 +150,7 @@ fileInput.onchange = (e) => {
 
 当点击上传文件时，控制台就会输出一个 FileList 数组，这个数组的每个元素都是一个 File 对象，一个上传的文件就对应一个 File 对象：每个 `File` 对象都包含文件的一些属性，这些属性都继承自 Blob 对象：
 
-![js-binary01](/Users/jokery/Desktop/LovinJoy/jokery_blog/content/assets/js-binary01.jpg)
+![js-binary01](../assets/js-binary01.jpg)
 
 - `lastModified`：引用文件最后修改日期，为自 1970 年 1 月 1 日 0:00 以来的毫秒数；
 - `lastModifiedDate`：引用文件的最后修改日期；
@@ -194,7 +194,7 @@ dropElement.ondrop = (e) => {
 
 这里得到的 `File` 对象和通过 `input` 标签获得的 `File` 对象是完全一样的。
 
-![js-binary02](/Users/jokery/Desktop/LovinJoy/jokery_blog/content/assets/js-binary02.jpg)
+![js-binary02](../assets/js-binary02.jpg)
 
 ## 3. FileReader
 
@@ -271,7 +271,7 @@ reader.onload = (e) => {
 
 使用上述例子读取文本文件时，就是比较正常的。如果读取二进制文件，比如 png 格式的图片，往往会产生乱码，如下：
 
-![js-binary03](/Users/jokery/Desktop/LovinJoy/jokery_blog/content/assets/js-binary03.jpg)
+![js-binary03](../assets/js-binary03.jpg)
 
 那该如何处理这种二进制数据呢？`readAsDataURL()` 是一个不错的选择，它可以将读取的文件的内容转换为 base64 数据的 URL 表示。这样，就可以直接将 URL 用在需要源链接的地方，比如 img 标签的 src 属性。
 
@@ -293,7 +293,7 @@ reader.onload = (e) => {
 
 这时，再次上传二进制图片时，就会在控制台打印一个 base64 编码的 URL，如下：
 
-![js-binary04](/Users/jokery/Desktop/LovinJoy/jokery_blog/content/assets/js-binary04.jpg)
+![js-binary04](../assets/js-binary04.jpg)
 
 下面来修改一下这个例子，将上传的图片通过以上方式显示在页面上：
 
@@ -317,7 +317,7 @@ reader.onload = (e) => {
 
 ```
 
-![js-binary05](/Users/jokery/Desktop/LovinJoy/jokery_blog/content/assets/js-binary05.jpg)
+![js-binary05](/../assets/js-binary05.jpg)
 
 当上传大文件时，可以通过 `progress` 事件来监控文件的读取进度：
 
